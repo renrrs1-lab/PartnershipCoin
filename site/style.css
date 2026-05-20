@@ -1,1 +1,51 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0f19;
+  color: white;
+}
 
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #111827, #0b0f19);
+}
+
+.logo {
+  width: 140px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 10px #00ffcc);
+}
+
+h1 {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+p {
+  color: #b0b0b0;
+}
+
+.card {
+  background: #111827;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,255,204,0.1);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 5px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #666;
+}
