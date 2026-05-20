@@ -1,48 +1,81 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PartnershipCoin (PARC)</title>
-  <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header class="hero">
-    <img src="logo.svg" class="logo" alt="PartnershipCoin Logo">
-    <h1>PartnershipCoin (PARC)</h1>
-    <p>A decentralized token built on trust, partnership and transparency.</p>
+    <img src="logo.svg" class="logo" alt="PARC Logo">
+
+    <h1>PartnershipCoin <span>(PARC)</span></h1>
+    <p class="subtitle">A decentralized asset built for trust, transparency and global partnership.</p>
+
+    <div class="buttons">
+      <a href="https://bscscan.com/address/0xc49ec19406dB9F0Dbb921c8597262C139aA91508" target="_blank" class="btn">View on BscScan</a>
+      <button class="btn primary" onclick="addMetaMask()">Add to MetaMask</button>
+    </div>
   </header>
 
-  <section class="card">
-    <h2>📊 Token Information</h2>
-    <ul>
-      <li><b>Name:</b> PartnershipCoin</li>
-      <li><b>Symbol:</b> PARC</li>
-      <li><b>Max Supply:</b> 1,000,000 PARC</li>
-      <li><b>Network:</b> BNB Smart Chain</li>
-      <li><b>Type:</b> BEP-20 Token</li>
-    </ul>
-  </section>
+  <section class="grid">
 
-  <section class="card">
-    <h2>🤝 About the Project</h2>
-    <p>
-      PartnershipCoin was created to represent collaboration and trust in decentralized finance.
-      Our mission is to build a transparent ecosystem powered by community and blockchain technology.
-    </p>
-  </section>
+    <div class="card">
+      <h2>📊 Token Info</h2>
+      <p><b>Name:</b> PartnershipCoin</p>
+      <p><b>Symbol:</b> PARC</p>
+      <p><b>Supply:</b> 1,000,000</p>
+      <p><b>Network:</b> BNB Smart Chain</p>
+      <p><b>Type:</b> BEP-20</p>
+    </div>
 
-  <section class="card">
-    <h2>🔗 Contract</h2>
-    <p>
-      0xc49ec19406dB9F0Dbb921c8597262C139aA91508
-    </p>
+    <div class="card">
+      <h2>📈 Contract</h2>
+      <p class="mono">0xc49ec19406dB9F0Dbb921c8597262C139aA91508</p>
+    </div>
+
+    <div class="card">
+      <h2>🤝 About</h2>
+      <p>
+        PartnershipCoin represents decentralized collaboration between people, communities and blockchain systems.
+        Built for transparency and long-term ecosystem growth.
+      </p>
+    </div>
+
   </section>
 
   <footer>
-    <p>© 2026 PartnershipCoin - All rights reserved</p>
+    <p>© 2026 PartnershipCoin (PARC) • All rights reserved</p>
   </footer>
+
+<script>
+async function addMetaMask() {
+  if (!window.ethereum) {
+    alert('MetaMask not found');
+    return;
+  }
+
+  const tokenAddress = '0xc49ec19406dB9F0Dbb921c8597262C139aA91508';
+
+  try {
+    await window.ethereum.request({
+      method: 'wallet_watchAsset',
+      params: {
+        type: 'ERC20',
+        options: {
+          address: tokenAddress,
+          symbol: 'PARC',
+          decimals: 18,
+        },
+      },
+    });
+  } catch (err) {
+    console.log(err);
+  }
+}
+</script>
 
 </body>
 </html>
