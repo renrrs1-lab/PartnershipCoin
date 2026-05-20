@@ -4,27 +4,137 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PartnershipCoin (PARC)</title>
+
   <style>
-body {
-  background: #0b0f19;
-  color: white;
-}
-</style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at top, #111827, #05070d);
+      color: white;
+      text-align: center;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 70px 20px;
+    }
+
+    .logo {
+      width: 150px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 15px #00ffcc);
+    }
+
+    h1 {
+      font-size: 42px;
+      margin: 10px 0;
+    }
+
+    h1 span {
+      color: #00ffcc;
+    }
+
+    .subtitle {
+      color: #aaa;
+      margin-bottom: 25px;
+    }
+
+    /* BUTTONS */
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .btn {
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: 1px solid #00ffcc;
+      color: white;
+      cursor: pointer;
+      background: transparent;
+      transition: 0.3s;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      background: #00ffcc;
+      color: black;
+    }
+
+    .primary {
+      background: #00ffcc;
+      color: black;
+      border: none;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* CARDS */
+    .card {
+      background: rgba(17, 24, 39, 0.8);
+      border: 1px solid rgba(0,255,204,0.15);
+      padding: 20px;
+      border-radius: 12px;
+      text-align: left;
+      box-shadow: 0 0 15px rgba(0,255,204,0.05);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: #00ffcc;
+      font-size: 18px;
+    }
+
+    .mono {
+      font-family: monospace;
+      font-size: 12px;
+      word-break: break-all;
+    }
+
+    footer {
+      padding: 30px;
+      color: #666;
+      font-size: 12px;
+    }
+  </style>
 </head>
+
 <body>
 
+  <!-- HERO -->
   <header class="hero">
     <img src="logo.svg" class="logo" alt="PARC Logo">
 
     <h1>PartnershipCoin <span>(PARC)</span></h1>
-    <p class="subtitle">A decentralized asset built for trust, transparency and global partnership.</p>
+    <p class="subtitle">
+      A decentralized asset built for trust, transparency and global partnership.
+    </p>
 
     <div class="buttons">
-      <a href="https://bscscan.com/address/0xc49ec19406dB9F0Dbb921c8597262C139aA91508" target="_blank" class="btn">View on BscScan</a>
-      <button class="btn primary" onclick="addMetaMask()">Add to MetaMask</button>
+      <a class="btn" target="_blank"
+         href="https://bscscan.com/address/0xc49ec19406dB9F0Dbb921c8597262C139aA91508">
+        View on BscScan
+      </a>
+
+      <button class="btn primary" onclick="addMetaMask()">
+        Add to MetaMask
+      </button>
     </div>
   </header>
 
+  <!-- CONTENT -->
   <section class="grid">
 
     <div class="card">
@@ -44,43 +154,43 @@ body {
     <div class="card">
       <h2>🤝 About</h2>
       <p>
-        PartnershipCoin represents decentralized collaboration between people, communities and blockchain systems.
-        Built for transparency and long-term ecosystem growth.
+        PartnershipCoin represents decentralized collaboration between people,
+        communities and blockchain systems. Built for transparency and long-term growth.
       </p>
     </div>
 
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>© 2026 PartnershipCoin (PARC) • All rights reserved</p>
+    © 2026 PartnershipCoin (PARC) • All rights reserved
   </footer>
 
-<script>
-async function addMetaMask() {
-  if (!window.ethereum) {
-    alert('MetaMask not found');
-    return;
-  }
+  <!-- METAMASK -->
+  <script>
+    async function addMetaMask() {
+      if (!window.ethereum) {
+        alert("MetaMask not found");
+        return;
+      }
 
-  const tokenAddress = '0xc49ec19406dB9F0Dbb921c8597262C139aA91508';
-
-  try {
-    await window.ethereum.request({
-      method: 'wallet_watchAsset',
-      params: {
-        type: 'ERC20',
-        options: {
-          address: tokenAddress,
-          symbol: 'PARC',
-          decimals: 18,
-        },
-      },
-    });
-  } catch (err) {
-    console.log(err);
-  }
-}
-</script>
+      try {
+        await window.ethereum.request({
+          method: "wallet_watchAsset",
+          params: {
+            type: "ERC20",
+            options: {
+              address: "0xc49ec19406dB9F0Dbb921c8597262C139aA91508",
+              symbol: "PARC",
+              decimals: 18
+            }
+          }
+        });
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  </script>
 
 </body>
 </html>
