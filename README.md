@@ -1,4 +1,4 @@
-# 💎 PartnershipCoin (PARC)
+# 💎 PartnershipCoin (PARC) 
 
 PartnershipCoin is a BEP-20 token built on BNB Smart Chain.
 
