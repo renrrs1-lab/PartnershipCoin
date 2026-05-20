@@ -1,63 +1,153 @@
-<!-- Handshake -->
-<g transform="translate(0,10)">
-  <!-- left sleeve -->
-  <path d="M82 268 L166 307 L196 235 L112 196 Z"
-        fill="#163a67" stroke="url(#gold)" stroke-width="4"/>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff2b3"/>
+      <stop offset="18%" stop-color="#f7d46a"/>
+      <stop offset="40%" stop-color="#d8a63a"/>
+      <stop offset="65%" stop-color="#b97a1f"/>
+      <stop offset="100%" stop-color="#ffe89a"/>
+    </linearGradient>
 
-  <!-- right sleeve -->
-  <path d="M430 268 L346 307 L316 235 L400 196 Z"
-        fill="url(#goldDark)" stroke="url(#gold)" stroke-width="4"/>
+    <linearGradient id="goldDark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8d5a12"/>
+      <stop offset="100%" stop-color="#f0c85a"/>
+    </linearGradient>
 
-  <!-- left cuff -->
-  <rect x="156" y="245" width="30" height="58" rx="6"
-        fill="url(#gold)" stroke="#7c5211" stroke-width="2"/>
+    <radialGradient id="centerBlue" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#123a66"/>
+      <stop offset="55%" stop-color="#07152b"/>
+      <stop offset="100%" stop-color="#02040a"/>
+    </radialGradient>
 
-  <!-- right cuff -->
-  <rect x="326" y="245" width="30" height="58" rx="6"
-        fill="url(#gold)" stroke="#7c5211" stroke-width="2"/>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
 
-  <!-- handshake base -->
-  <path d="M176 286
-           C192 266, 212 255, 233 252
-           C251 250, 268 254, 281 262
-           C291 268, 300 274, 308 282
-           C315 289, 324 295, 333 297
-           C340 299, 347 296, 349 290
-           C351 283, 348 276, 341 271
-           C332 264, 321 259, 308 256
-           C295 253, 282 249, 269 243
-           C253 236, 235 235, 219 240
-           C203 245, 188 256, 178 269
-           C174 274, 172 280, 176 286 Z"
-        fill="url(#gold)"
-        stroke="#6f4810"
-        stroke-width="4"
-        stroke-linejoin="round"
-        stroke-linecap="round"/>
+    <path id="topArc" d="M 70 256 A 186 186 0 0 1 442 256" />
+    <path id="bottomArc" d="M 442 256 A 186 186 0 0 1 70 256" />
+  </defs>
 
-  <!-- thumb -->
-  <path d="M226 257
-           C235 248, 248 244, 259 246
-           C269 247, 275 252, 278 259
-           C279 264, 275 269, 269 269
-           C262 269, 255 266, 249 263"
-        fill="none"
-        stroke="#8a5b14"
-        stroke-width="4"
-        stroke-linecap="round"
-        stroke-linejoin="round"/>
+  <!-- Outer coin -->
+  <circle cx="256" cy="256" r="244" fill="url(#gold)" />
+  <circle cx="256" cy="256" r="232" fill="#0a0a0a" stroke="url(#goldDark)" stroke-width="6"/>
+  <circle cx="256" cy="256" r="214" fill="url(#centerBlue)" stroke="url(#gold)" stroke-width="3"/>
 
-  <!-- finger lines -->
-  <path d="M207 287 C217 294, 227 301, 238 307" stroke="#8a5b14" stroke-width="4" fill="none" stroke-linecap="round"/>
-  <path d="M225 276 C236 283, 247 289, 259 295" stroke="#8a5b14" stroke-width="4" fill="none" stroke-linecap="round"/>
-  <path d="M244 268 C255 274, 267 280, 279 285" stroke="#8a5b14" stroke-width="4" fill="none" stroke-linecap="round"/>
-  <path d="M263 263 C274 268, 286 273, 297 278" stroke="#8a5b14" stroke-width="4" fill="none" stroke-linecap="round"/>
-  <path d="M282 262 C293 266, 304 270, 314 274" stroke="#8a5b14" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- Decorative circuits -->
+  <g stroke="url(#gold)" stroke-width="3" fill="none" opacity="0.95">
+    <path d="M72 180 L98 180 L120 202 L120 232" />
+    <path d="M72 332 L102 332 L122 312 L122 282" />
+    <path d="M440 180 L414 180 L392 202 L392 232" />
+    <path d="M440 332 L410 332 L390 312 L390 282" />
+    <circle cx="96" cy="188" r="4" fill="url(#gold)"/>
+    <circle cx="116" cy="214" r="4" fill="url(#gold)"/>
+    <circle cx="116" cy="300" r="4" fill="url(#gold)"/>
+    <circle cx="96" cy="324" r="4" fill="url(#gold)"/>
+    <circle cx="416" cy="188" r="4" fill="url(#gold)"/>
+    <circle cx="396" cy="214" r="4" fill="url(#gold)"/>
+    <circle cx="396" cy="300" r="4" fill="url(#gold)"/>
+    <circle cx="416" cy="324" r="4" fill="url(#gold)"/>
+  </g>
 
-  <!-- highlight -->
-  <path d="M190 279 C205 262, 225 253, 246 250"
-        stroke="rgba(255,255,255,0.18)"
-        stroke-width="4"
-        fill="none"
-        stroke-linecap="round"/>
-</g>
+  <!-- Top text -->
+  <text fill="url(#gold)" font-size="22" font-family="Arial, sans-serif" letter-spacing="4">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">PARTNERSHIPCOIN</textPath>
+  </text>
+
+  <!-- Center title -->
+  <text x="256" y="156" text-anchor="middle" fill="url(#gold)" font-size="72"
+        font-family="Arial, sans-serif" font-weight="700" letter-spacing="2" filter="url(#glow)">
+    PARC
+  </text>
+  <text x="256" y="195" text-anchor="middle" fill="#e8c96a" font-size="18"
+        font-family="Arial, sans-serif" letter-spacing="5">
+    PARTNERSHIPCOIN
+  </text>
+
+  <!-- Handshake -->
+  <g transform="translate(0,10)">
+    <!-- left sleeve -->
+    <path d="M82 268 L166 307 L196 235 L112 196 Z"
+          fill="#163a67" stroke="url(#gold)" stroke-width="4"/>
+
+    <!-- right sleeve -->
+    <path d="M430 268 L346 307 L316 235 L400 196 Z"
+          fill="url(#goldDark)" stroke="url(#gold)" stroke-width="4"/>
+
+    <!-- left cuff -->
+    <rect x="156" y="245" width="30" height="58" rx="6"
+          fill="url(#gold)" stroke="#7c5211" stroke-width="2"/>
+
+    <!-- right cuff -->
+    <rect x="326" y="245" width="30" height="58" rx="6"
+          fill="url(#gold)" stroke="#7c5211" stroke-width="2"/>
+
+    <!-- handshake base -->
+    <path d="M176 286
+             C192 266, 212 255, 233 252
+             C251 250, 268 254, 281 262
+             C291 268, 300 274, 308 282
+             C315 289, 324 295, 333 297
+             C340 299, 347 296, 349 290
+             C351 283, 348 276, 341 271
+             C332 264, 321 259, 308 256
+             C295 253, 282 249, 269 243
+             C253 236, 235 235, 219 240
+             C203 245, 188 256, 178 269
+             C174 274, 172 280, 176 286 Z"
+          fill="url(#gold)"
+          stroke="#6f4810"
+          stroke-width="4"
+          stroke-linejoin="round"
+          stroke-linecap="round"/>
+
+    <!-- thumb -->
+    <path d="M226 257
+             C235 248, 248 244, 259 246
+             C269 247, 275 252, 278 259
+             C279 264, 275 269, 269 269
+             C262 269, 255 266, 249 263"
+          fill="none"
+          stroke="#8a5b14"
+          stroke-width="4"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+
+    <!-- finger lines -->
+    <path d="M207 287 C217 294, 227 301, 238 307" stroke="#8a5b14" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M225 276 C236 283, 247 289, 259 295" stroke="#8a5b14" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M244 268 C255 274, 267 280, 279 285" stroke="#8a5b14" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M263 263 C274 268, 286 273, 297 278" stroke="#8a5b14" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M282 262 C293 266, 304 270, 314 274" stroke="#8a5b14" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+    <!-- highlight -->
+    <path d="M190 279 C205 262, 225 253, 246 250"
+          stroke="rgba(255,255,255,0.18)"
+          stroke-width="4"
+          fill="none"
+          stroke-linecap="round"/>
+  </g>
+
+  <!-- Bottom text -->
+  <text x="256" y="392" text-anchor="middle" fill="url(#gold)" font-size="16"
+        font-family="Arial, sans-serif" letter-spacing="4">
+    BUILT ON TRUST
+  </text>
+  <text x="256" y="420" text-anchor="middle" fill="url(#gold)" font-size="15"
+        font-family="Arial, sans-serif" letter-spacing="3">
+    POWERED BY PARTNERSHIP
+  </text>
+
+  <!-- Bottom arc text -->
+  <text fill="url(#gold)" font-size="18" font-family="Arial, sans-serif" letter-spacing="3">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">
+      COLLABORATION • TRUST • VALUE
+    </textPath>
+  </text>
+
+  <!-- Inner divider -->
+  <circle cx="256" cy="256" r="206" fill="none" stroke="rgba(255,215,120,0.35)" stroke-width="2"/>
+</svg>
