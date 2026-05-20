@@ -11,7 +11,7 @@ PartnershipCoin is a BEP-20 token built on BNB Smart Chain.
 - Supply: 1,000,000  
 
 ## 🌐 Website
-/site (GitHub Pages coming soon)
+https://renrrs1-lab.github.io/PartnershipCoin/
 
 ## 🤝 Vision
 A decentralized token focused on trust and partnership.
