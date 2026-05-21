@@ -1,28 +1,22 @@
-Tokenomics - PARC
-Initial Supply
+# Tokenomics - PARC
+
+## Initial Supply
 
 1,000,000 PARC
 
-Token Distribution
+## Token Distribution
 
-Category	Allocation
+| Category            | Allocation |
+| ------------------- | ---------- |
+| Liquidity           | 20%        |
+| Community & Airdrop | 30%        |
+| Reserve Treasury    | 40%        |
+| Team                | 10%        |
 
-Liquidity	20%
+## Notes
 
-Community & Airdrop	30%
-
-Reserve Treasury	40%
-
-Team	10%
-
-Notes:
-
-PARC is a fixed supply token.
-
-No additional minting functions are available.
-
-Liquidity is initially provided on PancakeSwap.
-
-Community allocation may be used for airdrops, rewards, partnerships and ecosystem growth.
-
-Treasury reserves are intended for long-term sustainability and future ecosystem development.
+* PARC is a fixed supply token.
+* No additional minting functions are available.
+* Liquidity is initially provided on PancakeSwap.
+* Community allocation may be used for airdrops, rewards, partnerships and ecosystem growth.
+* Treasury reserves are intended for long-term sustainability and future ecosystem development.
