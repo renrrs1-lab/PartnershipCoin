@@ -1,3 +1,7 @@
+/* =========================
+   GLOBAL
+========================= */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -7,27 +11,54 @@ body {
   min-height: 100vh;
 }
 
-/* TITULO */
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  padding: 70px 20px;
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 15px #00ffcc);
+}
+
+/* =========================
+   TITLES
+========================= */
+
+h1 {
+  font-size: 42px;
+  margin: 10px 0;
+}
+
 h1 span {
   color: #00ffcc;
 }
 
-/* SUBTITLE */
 .subtitle {
   color: #aaa;
   margin-bottom: 25px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
   line-height: 1.5;
 }
 
-/* BOTÕES */
+/* =========================
+   BUTTONS
+========================= */
+
 .buttons {
   display: flex;
   justify-content: center;
   gap: 15px;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 
-/* BOTÃO */
 .btn {
   padding: 12px 20px;
   border-radius: 8px;
@@ -46,7 +77,6 @@ h1 span {
   transform: translateY(-2px);
 }
 
-/* BOTÃO PRINCIPAL */
 .primary {
   background: #00ffcc;
   color: black;
@@ -55,17 +85,23 @@ h1 span {
   box-shadow: 0 0 20px rgba(0,255,204,0.35);
 }
 
-/* GRID */
+/* =========================
+   GRID
+========================= */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
   padding: 20px;
 }
 
-/* CARD */
+/* =========================
+   CARDS
+========================= */
+
 .card {
   background: rgba(17, 24, 39, 0.8);
   border: 1px solid rgba(0,255,204,0.15);
@@ -83,10 +119,15 @@ h1 span {
 }
 
 .card h2 {
+  margin-top: 0;
   color: #00ffcc;
+  font-size: 18px;
 }
 
-/* MONO */
+/* =========================
+   MONOSPACE
+========================= */
+
 .mono {
   font-family: monospace;
   font-size: 12px;
@@ -94,17 +135,63 @@ h1 span {
   color: #ccc;
 }
 
-/* FOOTER */
+/* =========================
+   LINKS
+========================= */
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.links a {
+  color: #00ffcc;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   CHART
+========================= */
+
+.chart-card {
+  grid-column: 1 / -1;
+}
+
+.chart-card iframe {
+  width: 100%;
+  height: 480px;
+  border: 1px solid rgba(0,255,204,0.15);
+  border-radius: 12px;
+  background: #05070d;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
 footer {
   padding: 30px;
   color: #666;
   font-size: 12px;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 600px) {
+
   h1 {
     font-size: 32px;
+  }
+
+  .logo {
+    width: 110px;
   }
 
   .buttons {
@@ -115,4 +202,9 @@ footer {
   .btn {
     width: 220px;
   }
+
+  .chart-card iframe {
+    height: 420px;
+  }
+
 }
