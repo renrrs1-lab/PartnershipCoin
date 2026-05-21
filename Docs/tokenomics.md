@@ -6,13 +6,9 @@ Initial Supply
 Token Distribution
 
 Category	Allocation
-
 Liquidity	20%
-
 Community & Airdrop	30%
-
 Reserve Treasury	40%
-
 Team	10%
 
 Notes:
