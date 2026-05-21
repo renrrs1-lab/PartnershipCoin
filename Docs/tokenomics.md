@@ -9,6 +9,7 @@ Liquidity	20%
 Community & Airdrop	30%
 Reserve Treasury	40%
 Team	10%
+
 Notes
 PARC is a fixed supply token.
 No additional minting functions are available.
