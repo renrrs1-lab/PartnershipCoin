@@ -4,13 +4,14 @@ Initial Supply
 1,000,000 PARC
 
 Token Distribution
+
 Category	Allocation
 Liquidity	20%
 Community & Airdrop	30%
 Reserve Treasury	40%
 Team	10%
 
-Notes
+Notes:
 PARC is a fixed supply token.
 No additional minting functions are available.
 Liquidity is initially provided on PancakeSwap.
