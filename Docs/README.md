@@ -3,7 +3,7 @@
 PartnershipCoin is a BEP-20 token built on BNB Smart Chain.
 
 ## 🚀 Contract
-0xc49ec19406dB9F0Dbb921c8597262C139aA91508
+0x4A7CB744EE8f1B656A20940B80b368d5d8172875
 
 ## 📊 Token Info
 - Name: PartnershipCoin  
