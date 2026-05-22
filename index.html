@@ -34,12 +34,12 @@
       </button>
 
       <a class="btn primary" target="_blank"
-         href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0x4A7CB744EE8f1B656A20940B80b368d5d8172875">
+         href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0x4A7CB744EE8f1B656A20940B80b368d5d8172875&chain=bsc">
         Buy PARC
       </a>
 
       <a class="btn" target="_blank"
-         href="https://pancakeswap.finance/swap?inputCurrency=0x4A7CB744EE8f1B656A20940B80b368d5d8172875&outputCurrency=BNB">
+         href="https://pancakeswap.finance/swap?inputCurrency=0x4A7CB744EE8f1B656A20940B80b368d5d8172875&outputCurrency=BNB&chain=bsc">
         Sell PARC
       </a>
     </div>
@@ -68,6 +68,13 @@
     <div class="card">
       <h2>📈 Contract</h2>
       <p class="mono">0x4A7CB744EE8f1B656A20940B80b368d5d8172875</p>
+
+      <div class="links">
+        <a target="_blank"
+           href="https://bscscan.com/address/0x4A7CB744EE8f1B656A20940B80b368d5d8172875">
+          Open Contract
+        </a>
+      </div>
     </div>
 
     <div class="card">
@@ -75,6 +82,17 @@
       <p>
         PartnershipCoin (PARC) is a decentralized cryptocurrency focused on
         collaboration, transparency and community participation through blockchain technology.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🚀 Community</h2>
+      <p>
+        PartnershipCoin is building a transparent and community-driven ecosystem
+        focused on collaboration and long-term Web3 utility.
+      </p>
+      <p>
+        Join the PARC community through Discord, Telegram and X/Twitter.
       </p>
     </div>
 
@@ -90,9 +108,41 @@
       <h2>🌐 Official Links</h2>
 
       <div class="links">
-        <a target="_blank" href="https://github.com/renrrs1-lab/PartnershipCoin">GitHub Repository</a>
-        <a target="_blank" href="https://dexscreener.com/bsc/0x4A7CB744EE8f1B656A20940B80b368d5d8172875">DexScreener</a>
-        <a target="_blank" href="https://www.geckoterminal.com/bsc/tokens/0x4A7CB744EE8f1B656A20940B80b368d5d8172875">GeckoTerminal</a>
+        <a target="_blank" href="https://renrrs1-lab.github.io/PartnershipCoin/">
+          Website
+        </a>
+
+        <a target="_blank" href="https://x.com/PARCCoin">
+          X / Twitter
+        </a>
+
+        <a target="_blank" href="https://t.me/+sN0SkOwkpkdmODZh">
+          Telegram
+        </a>
+
+        <a target="_blank" href="https://discord.gg/bv75R8Gwk9">
+          Discord
+        </a>
+
+        <a target="_blank" href="https://github.com/renrrs1-lab/PartnershipCoin">
+          GitHub Repository
+        </a>
+
+        <a target="_blank" href="https://bscscan.com/token/0x4A7CB744EE8f1B656A20940B80b368d5d8172875">
+          BscScan
+        </a>
+
+        <a target="_blank" href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0x4A7CB744EE8f1B656A20940B80b368d5d8172875&chain=bsc">
+          PancakeSwap
+        </a>
+
+        <a target="_blank" href="https://dexscreener.com/bsc/0x4A7CB744EE8f1B656A20940B80b368d5d8172875">
+          DexScreener
+        </a>
+
+        <a target="_blank" href="https://www.geckoterminal.com/pt/bsc/pools/0xf517f5c05b1214bd35e30bc03b2921e5230c93b5">
+          GeckoTerminal
+        </a>
       </div>
     </div>
 
@@ -107,7 +157,9 @@
   </section>
 
   <footer>
-    © 2026 PartnershipCoin (PARC) • Built on BNB Smart Chain
+    © 2026 PartnershipCoin (PARC)
+    <br><br>
+    Built on BNB Smart Chain • Community Driven • Web3 Ecosystem
   </footer>
 
   <script>
@@ -140,6 +192,7 @@
 
     function formatUsd(value, decimals = 8) {
       if (!value) return "N/A";
+
       const number = Number(value);
 
       if (number >= 1) {
