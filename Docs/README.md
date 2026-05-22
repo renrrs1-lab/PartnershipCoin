@@ -16,7 +16,7 @@ https://x.com/PARCCoin
 https://t.me/+sN0SkOwkpkdmODZh
 
 💬 Discord  
-https://discord.gg/ftZ3F6FXM
+https://discord.gg/bv75R8Gwk9
 
 📄 BscScan  
 https://bscscan.com/token/0x4A7CB744EE8f1B656A20940B80b368d5d8172875
