@@ -59,4 +59,4 @@ The application is not intended for users under 13 years old.
 
 For questions regarding this Privacy Policy:
 
-ren.rrs1@gmail.com
+partnercoinproject@gmail.com
