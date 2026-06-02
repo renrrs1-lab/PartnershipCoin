@@ -3,187 +3,228 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>PartnershipCoin (PARC)</title>
-
-  <meta name="description" content="PartnershipCoin (PARC) - Decentralized collaboration token on BNB Smart Chain.">
+  <meta name="description" content="PartnershipCoin (PARC) - transparent Web3 utility token and app ecosystem on BNB Smart Chain.">
   <link rel="icon" type="image/svg+xml" href="logo.svg">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-  <header class="hero">
-    <img src="logo.svg" class="logo" alt="PARC Logo">
-
-    <h1>PartnershipCoin <span>(PARC)</span></h1>
-
-    <p class="subtitle">
-      A decentralized asset built for trust, transparency,
-      collaboration and long-term community growth on BNB Smart Chain.
-    </p>
-
-    <div class="buttons">
-      <a class="btn" target="_blank"
-         href="https://bscscan.com/token/0x4A7CB744EE8f1B656A20940B80b368d5d8172875">
-        View on BscScan
+  <header class="hero" id="top">
+    <nav class="nav" aria-label="Official navigation">
+      <a href="#top" class="brand">
+        <img src="logo.svg" alt="PARC logo">
+        <span>PartnershipCoin</span>
       </a>
+      <div class="nav-links">
+        <a href="#app-progress">App</a>
+        <a href="#support">Support</a>
+        <a href="#official-links">Links</a>
+      </div>
+    </nav>
 
-      <button class="btn primary" onclick="addMetaMask()">
-        Add to MetaMask
-      </button>
-
-      <a class="btn primary" target="_blank"
-         href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0x4A7CB744EE8f1B656A20940B80b368d5d8172875&chain=bsc">
-        Buy PARC
-      </a>
-
-      <a class="btn" target="_blank"
-         href="https://pancakeswap.finance/swap?inputCurrency=0x4A7CB744EE8f1B656A20940B80b368d5d8172875&outputCurrency=BNB&chain=bsc">
-        Sell PARC
-      </a>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">BNB Smart Chain / BEP-20</p>
+        <h1>PartnershipCoin <span>(PARC)</span></h1>
+        <p class="subtitle">
+          A decentralized asset built step by step with transparency, real utility,
+          app development and long-term ecosystem growth.
+        </p>
+        <div class="buttons">
+          <a class="btn primary" target="_blank" rel="noopener"
+             href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0x4A7CB744EE8f1B656A20940B80b368d5d8172875&chain=bsc">
+            Buy PARC
+          </a>
+          <button class="btn" onclick="addMetaMask()">Add to MetaMask</button>
+          <a class="btn" target="_blank" rel="noopener"
+             href="https://bscscan.com/token/0x4A7CB744EE8f1B656A20940B80b368d5d8172875">
+            View on BscScan
+          </a>
+          <a class="btn" target="_blank" rel="noopener"
+             href="https://dex.coinmarketcap.com/pt-br/token/bsc/0x4a7cb744ee8f1b656a20940b80b368d5d8172875/">
+            CoinMarketCap DEX
+          </a>
+          <a class="btn" target="_blank" rel="noopener"
+             href="https://pancakeswap.finance/swap?inputCurrency=0x4A7CB744EE8f1B656A20940B80b368d5d8172875&outputCurrency=BNB&chain=bsc">
+            Sell PARC
+          </a>
+        </div>
+      </div>
+      <div class="hero-panel" aria-label="PARC ecosystem highlights">
+        <div>
+          <span class="metric">1,000,000</span>
+          <span class="metric-label">PARC supply</span>
+        </div>
+        <div>
+          <span class="metric">2027</span>
+          <span class="metric-label">Liquidity lock unlock</span>
+        </div>
+        <div>
+          <span class="metric">Active</span>
+          <span class="metric-label">Wallet app development</span>
+        </div>
+      </div>
     </div>
   </header>
 
-  <section class="grid">
-
-    <div class="card">
-      <h2>🔒 Liquidity Locked</h2>
-      <p>
-        PARC V2 liquidity is locked on PinkLock,
-        reinforcing transparency and long-term commitment.
-      </p>
-      <p><b>Pair:</b> PARC/WBNB</p>
-      <p><b>DEX:</b> PancakeSwap V2</p>
-      <p><b>Unlock Date:</b> May 25, 2027</p>
-    
-      <div class="links">
-        <a target="_blank"
-           href="https://www.pinksale.finance/pinklock/bsc/record/1620304">
-          View Liquidity Lock
-        </a>
+  <main>
+    <section class="section mascot-section" aria-labelledby="mascot-title">
+      <div class="section-copy">
+        <p class="eyebrow">Official Mascot</p>
+        <h2 id="mascot-title">PARC Assistant</h2>
+        <p class="large-copy">Building PARC step by step with transparency, utility and community.</p>
       </div>
-    </div>
-
-    <div class="card">
-      <h2>💵 Live Market</h2>
-      <p><b>Price:</b> <span id="price">Loading...</span></p>
-      <p><b>Market Cap:</b> <span id="marketCap">Loading...</span></p>
-      <p><b>Liquidity:</b> <span id="liquidity">Loading...</span></p>
-      <p><b>24h Volume:</b> <span id="volume24h">Loading...</span></p>
-    </div>
-
-    <div class="card">
-      <h2>📊 Token Info</h2>
-      <p><b>Name:</b> PartnershipCoin</p>
-      <p><b>Symbol:</b> PARC</p>
-      <p><b>Supply:</b> 1,000,000 PARC</p>
-      <p><b>Network:</b> BNB Smart Chain</p>
-      <p><b>Standard:</b> BEP-20</p>
-      <p><b>Decimals:</b> 18</p>
-    </div>
-
-    <div class="card">
-      <h2>📈 Contract</h2>
-      <p class="mono">0x4A7CB744EE8f1B656A20940B80b368d5d8172875</p>
-
-      <div class="links">
-        <a target="_blank"
-           href="https://bscscan.com/address/0x4A7CB744EE8f1B656A20940B80b368d5d8172875">
-          Open Contract
-        </a>
+      <div class="mascot-frame">
+        <img src="parc-assistant.png" alt="PARC Assistant official black and gold robot mascot">
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <h2>🤝 About</h2>
-      <p>
-        PartnershipCoin (PARC) is a decentralized cryptocurrency focused on
-        collaboration, transparency and community participation through blockchain technology.
-      </p>
-    </div>
+    <section class="grid">
+      <article class="card">
+        <h2>Liquidity Locked</h2>
+        <p>PARC V2 liquidity is locked on PinkLock, reinforcing transparency and long-term commitment.</p>
+        <p><b>Pair:</b> PARC/WBNB</p>
+        <p><b>DEX:</b> PancakeSwap V2</p>
+        <p><b>Unlock Date:</b> May 25, 2027</p>
+        <div class="links">
+          <a target="_blank" rel="noopener" href="https://www.pinksale.finance/pinklock/bsc/record/1620304">View Liquidity Lock</a>
+        </div>
+      </article>
 
-    <div class="card">
-      <h2>🚀 Community</h2>
-      <p>
-        PartnershipCoin is building a transparent and community-driven ecosystem
-        focused on collaboration and long-term Web3 utility.
-      </p>
-      <p>
-        Join the PARC community through Discord, Telegram and X/Twitter.
-      </p>
-    </div>
+      <article class="card">
+        <h2>Live Market</h2>
+        <p><b>Price:</b> <span id="price">Loading...</span></p>
+        <p><b>Market Cap:</b> <span id="marketCap">Loading...</span></p>
+        <p><b>Liquidity:</b> <span id="liquidity">Loading...</span></p>
+        <p><b>24h Volume:</b> <span id="volume24h">Loading...</span></p>
+      </article>
 
-    <div class="card">
-      <h2>💰 Tokenomics</h2>
-      <p><b>Liquidity:</b> 20%</p>
-      <p><b>Community & Airdrop:</b> 30%</p>
-      <p><b>Reserve:</b> 40%</p>
-      <p><b>Team:</b> 10%</p>
-    </div>
+      <article class="card">
+        <h2>Token Info</h2>
+        <p><b>Name:</b> PartnershipCoin</p>
+        <p><b>Symbol:</b> PARC</p>
+        <p><b>Supply:</b> 1,000,000 PARC</p>
+        <p><b>Network:</b> BNB Smart Chain</p>
+        <p><b>Standard:</b> BEP-20</p>
+        <p><b>Decimals:</b> 18</p>
+      </article>
 
-    <div class="card">
-      <h2>🌐 Official Links</h2>
+      <article class="card">
+        <h2>Contract</h2>
+        <p class="mono">0x4A7CB744EE8f1B656A20940B80b368d5d8172875</p>
+        <div class="links">
+          <a target="_blank" rel="noopener" href="https://bscscan.com/address/0x4A7CB744EE8f1B656A20940B80b368d5d8172875">Open Contract</a>
+        </div>
+      </article>
 
-      <div class="links">
-        <a target="_blank" href="https://renrrs1-lab.github.io/PartnershipCoin/">
-          Website
-        </a>
+      <article class="card">
+        <h2>About</h2>
+        <p>
+          PartnershipCoin (PARC) is a decentralized cryptocurrency focused on
+          collaboration, transparency and community participation through blockchain technology.
+        </p>
+      </article>
 
-        <a target="_blank" href="https://x.com/PARCCoin">
-          X / Twitter
-        </a>
+      <article class="card">
+        <h2>Community</h2>
+        <p>
+          PARC is building a transparent, community-driven ecosystem focused on
+          utility, responsible growth and long-term Web3 development.
+        </p>
+      </article>
 
-        <a target="_blank" href="https://t.me/+sN0SkOwkpkdmODZh">
-          Telegram
-        </a>
+      <article class="card">
+        <h2>Tokenomics</h2>
+        <p><b>Liquidity:</b> 20%</p>
+        <p><b>Community & Airdrop:</b> 30%</p>
+        <p><b>Reserve:</b> 40%</p>
+        <p><b>Team:</b> 10%</p>
+      </article>
+    </section>
 
-        <a target="_blank" href="https://discord.gg/bv75R8Gwk9">
-          Discord
-        </a>
-
-        <a target="_blank" href="https://github.com/renrrs1-lab/PartnershipCoin">
-          GitHub Repository
-        </a>
-
-        <a target="_blank" href="https://bscscan.com/token/0x4A7CB744EE8f1B656A20940B80b368d5d8172875">
-          BscScan
-        </a>
-
-        <a target="_blank" href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0x4A7CB744EE8f1B656A20940B80b368d5d8172875&chain=bsc">
-          PancakeSwap
-        </a>
-
-        <a target="_blank" href="https://dexscreener.com/bsc/0x4A7CB744EE8f1B656A20940B80b368d5d8172875">
-          DexScreener
-        </a>
-
-        <a target="_blank" href="https://www.geckoterminal.com/pt/bsc/pools/0xf517f5c05b1214bd35e30bc03b2921e5230c93b5">
-          GeckoTerminal
-        </a>
+    <section class="section" id="app-progress" aria-labelledby="app-progress-title">
+      <div class="section-copy">
+        <p class="eyebrow">Current Stage</p>
+        <h2 id="app-progress-title">PARC Wallet App Progress</h2>
+        <p>The PARC app is moving through functional wallet features, on-chain integrations and Play Store preparation.</p>
       </div>
-    </div>
+      <div class="progress-grid">
+        <span>Functional app</span>
+        <span>MetaMask integration</span>
+        <span>WalletConnect support</span>
+        <span>Real on-chain balance</span>
+        <span>Transaction history</span>
+        <span>QRCode support</span>
+        <span>Send & Receive</span>
+        <span>BscScan integration</span>
+        <span>Dynamic language translation</span>
+        <span>Play Store preparation</span>
+      </div>
+    </section>
 
-    <div class="card chart-card">
-      <h2>📊 Live Chart</h2>
+    <section class="section donation-section" id="support" aria-labelledby="support-title">
+      <div class="section-copy">
+        <p class="eyebrow">Support / Donation</p>
+        <h2 id="support-title">Support PARC Ecosystem Growth</h2>
+        <p>
+          PARC is being built step by step with focus on transparency, real utility and long-term ecosystem growth.
+          Community donations are optional and may be used to support liquidity, app development, infrastructure and project expansion.
+          All support helps strengthen the PARC ecosystem.
+        </p>
+        <p class="security-note">
+          Never share your seed phrase or private key. Donations are optional and do not represent investment promises or guaranteed returns.
+        </p>
+      </div>
+      <div class="donation-card">
+        <img src="PARC_Community_Fund_QR.png" alt="QR code for PARC donation wallet">
+        <p class="mono" id="donationWallet">0xfDcAbb9647602cdd50dFAF458c9cB91114fff358</p>
+        <button class="btn primary" id="copyDonationWallet" type="button">Copy Donation Wallet</button>
+        <p class="copy-status" id="copyStatus" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="section links-section" id="official-links" aria-labelledby="official-links-title">
+      <div class="section-copy">
+        <p class="eyebrow">Verified Resources</p>
+        <h2 id="official-links-title">Official Links</h2>
+      </div>
+      <div class="official-links">
+        <a target="_blank" rel="noopener" href="https://renrrs1-lab.github.io/PartnershipCoin/">Website</a>
+        <a target="_blank" rel="noopener" href="https://x.com/PARCCoin">X / Twitter</a>
+        <a target="_blank" rel="noopener" href="https://t.me/+sN0SkOwkpkdmODZh">Telegram</a>
+        <a target="_blank" rel="noopener" href="https://discord.gg/bv75R8Gwk9">Discord</a>
+        <a target="_blank" rel="noopener" href="https://bscscan.com/token/0x4A7CB744EE8f1B656A20940B80b368d5d8172875">BscScan</a>
+        <a target="_blank" rel="noopener" href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0x4A7CB744EE8f1B656A20940B80b368d5d8172875&chain=bsc">PancakeSwap</a>
+        <a target="_blank" rel="noopener" href="https://dexscreener.com/bsc/0x4A7CB744EE8f1B656A20940B80b368d5d8172875">DexScreener</a>
+        <a target="_blank" rel="noopener" href="https://www.geckoterminal.com/pt/bsc/pools/0xf517f5c05b1214bd35e30bc03b2921e5230c93b5">GeckoTerminal</a>
+        <a target="_blank" rel="noopener" href="https://dex.coinmarketcap.com/pt-br/token/bsc/0x4a7cb744ee8f1b656a20940b80b368d5d8172875/">CoinMarketCap DEX</a>
+        <a target="_blank" rel="noopener" href="https://github.com/renrrs1-lab/PartnershipCoin">GitHub</a>
+      </div>
+    </section>
+
+    <section class="section chart-section" aria-labelledby="chart-title">
+      <div class="section-copy">
+        <p class="eyebrow">Market Chart</p>
+        <h2 id="chart-title">Live Chart</h2>
+      </div>
       <iframe
+        title="PARC live chart on DexScreener"
         src="https://dexscreener.com/bsc/0x4A7CB744EE8f1B656A20940B80b368d5d8172875?embed=1&theme=dark"
         frameborder="0">
       </iframe>
-    </div>
-
-  </section>
+    </section>
+  </main>
 
   <footer>
-    © 2026 PartnershipCoin (PARC)
-    <br><br>
-    Built on BNB Smart Chain • Community Driven • Web3 Ecosystem
+    <p>Copyright 2026 PartnershipCoin (PARC)</p>
+    <p>Built on BNB Smart Chain - Community Driven - Web3 Ecosystem</p>
   </footer>
 
   <script>
     const PAIR_ADDRESS = "0xf517f5c05b1214bd35e30bc03b2921e5230c93b5";
     const PARC_TOKEN = "0x4A7CB744EE8f1B656A20940B80b368d5d8172875";
-    
+    const DONATION_WALLET = "0xfDcAbb9647602cdd50dFAF458c9cB91114fff358";
+
     async function addMetaMask() {
       if (!window.ethereum) {
         alert("MetaMask not found. Open this site inside MetaMask Browser on mobile.");
@@ -211,72 +252,66 @@
 
     function formatUsd(value, decimals = 8) {
       if (!value) return "N/A";
-
       const number = Number(value);
-
       if (number >= 1) {
         return "$" + number.toLocaleString("en-US", {
           minimumFractionDigits: 2,
           maximumFractionDigits: 2
         });
       }
-
       return "$" + number.toFixed(decimals);
     }
 
     function formatUsdCompact(value) {
       if (!value) return "N/A";
-
       return "$" + Number(value).toLocaleString("en-US", {
         maximumFractionDigits: 2
       });
     }
 
     async function loadDexData() {
+      try {
+        const response = await fetch(`https://api.dexscreener.com/latest/dex/pairs/bsc/${PAIR_ADDRESS}`);
+        const data = await response.json();
+        const pair = data.pair;
 
-  try {
+        if (!pair) {
+          document.getElementById("price").innerText = "Not available yet";
+          document.getElementById("marketCap").innerText = "N/A";
+          document.getElementById("liquidity").innerText = "N/A";
+          document.getElementById("volume24h").innerText = "N/A";
+          return;
+        }
 
-    const response = await fetch(
-      `https://api.dexscreener.com/latest/dex/pairs/bsc/${PAIR_ADDRESS}`
-    );
-
-    const data = await response.json();
-
-    const pair = data.pair;
-
-    if (!pair) {
-
-      document.getElementById("price").innerText = "Not available yet";
-      document.getElementById("marketCap").innerText = "N/A";
-      document.getElementById("liquidity").innerText = "N/A";
-      document.getElementById("volume24h").innerText = "N/A";
-
-      return;
+        document.getElementById("price").innerText = pair.priceUsd ? formatUsd(pair.priceUsd) : "N/A";
+        document.getElementById("marketCap").innerText = pair.marketCap ? formatUsdCompact(pair.marketCap) : "N/A";
+        document.getElementById("liquidity").innerText = pair.liquidity?.usd ? formatUsdCompact(pair.liquidity.usd) : "N/A";
+        document.getElementById("volume24h").innerText = pair.volume?.h24 ? formatUsdCompact(pair.volume.h24) : "N/A";
+      } catch (error) {
+        console.error(error);
+        document.getElementById("price").innerText = "Error loading data";
+      }
     }
 
-    document.getElementById("price").innerText =
-      pair.priceUsd ? formatUsd(pair.priceUsd) : "N/A";
+    async function copyDonationWallet() {
+      const status = document.getElementById("copyStatus");
+      try {
+        await navigator.clipboard.writeText(DONATION_WALLET);
+        status.innerText = "Donation wallet copied.";
+      } catch (error) {
+        const wallet = document.getElementById("donationWallet");
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(wallet);
+        selection.removeAllRanges();
+        selection.addRange(range);
+        status.innerText = "Wallet selected. Press Ctrl+C to copy.";
+      }
+    }
 
-    document.getElementById("marketCap").innerText =
-      pair.marketCap ? formatUsdCompact(pair.marketCap) : "N/A";
-
-    document.getElementById("liquidity").innerText =
-      pair.liquidity?.usd ? formatUsdCompact(pair.liquidity.usd) : "N/A";
-
-    document.getElementById("volume24h").innerText =
-      pair.volume?.h24 ? formatUsdCompact(pair.volume.h24) : "N/A";
-
-  } catch (error) {
-
-    console.error(error);
-
-    document.getElementById("price").innerText = "Error loading data";
-  }
-}
-
+    document.getElementById("copyDonationWallet").addEventListener("click", copyDonationWallet);
     loadDexData();
     setInterval(loadDexData, 60000);
   </script>
-
 </body>
 </html>
