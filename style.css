@@ -168,6 +168,7 @@ footer {
 }
 
 .hero-panel,
+.manual-card,
 .card,
 .donation-card {
   border: 1px solid var(--line);
@@ -180,6 +181,43 @@ footer {
   display: grid;
   gap: 18px;
   padding: 26px;
+}
+
+.notice {
+  margin: 18px 0 0;
+  color: #f1dca4;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.manual-card {
+  max-width: 640px;
+  margin-top: 18px;
+  padding: 18px;
+}
+
+.manual-card h2 {
+  margin-bottom: 12px;
+  color: var(--gold-bright);
+  font-size: 18px;
+}
+
+.manual-card p {
+  margin: 8px 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.manual-card .compact {
+  min-height: 40px;
+  margin-top: 8px;
+  padding: 10px 14px;
+}
+
+.mobile-fallback {
+  max-width: 540px;
+  color: #d8eefe !important;
+  font-size: 13px;
 }
 
 .metric,
@@ -221,6 +259,12 @@ main {
   color: var(--text) !important;
 }
 
+.section-subtitle {
+  margin-top: 16px;
+  color: var(--text) !important;
+  font-size: clamp(20px, 2.6vw, 30px);
+}
+
 .mascot-frame {
   overflow: hidden;
   border: 1px solid var(--line);
@@ -234,6 +278,83 @@ main {
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center top;
+}
+
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.feature-cards span {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  padding: 13px 14px;
+  border: 1px solid rgba(91, 199, 255, 0.26);
+  border-radius: 8px;
+  background: rgba(91, 199, 255, 0.07);
+  color: var(--text);
+  font-weight: 800;
+}
+
+.live-market-section {
+  border-top: 1px solid rgba(214, 168, 63, 0.14);
+}
+
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.market-card {
+  display: flex;
+  min-height: 250px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(91, 199, 255, 0.08), rgba(214, 168, 63, 0.05)),
+    rgba(255, 255, 255, 0.03);
+  box-shadow: 0 18px 54px rgba(0, 0, 0, 0.28);
+}
+
+.market-card h3 {
+  margin: 0;
+  color: var(--gold-bright);
+  font-size: 21px;
+}
+
+.market-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.market-card .btn {
+  width: 100%;
+  text-align: center;
+}
+
+.market-notice {
+  margin-top: 22px;
+  padding: 18px;
+  border: 1px solid rgba(91, 199, 255, 0.24);
+  border-left: 3px solid var(--blue);
+  border-radius: 8px;
+  background: rgba(91, 199, 255, 0.06);
+}
+
+.market-notice p {
+  margin: 8px 0;
+  color: #d8eefe;
+  line-height: 1.6;
 }
 
 .grid {
@@ -284,7 +405,7 @@ main {
 
 .progress-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
   margin-top: 28px;
 }
@@ -310,6 +431,15 @@ main {
   border-radius: 999px;
   background: var(--gold-bright);
   box-shadow: 0 0 12px rgba(243, 212, 119, 0.8);
+}
+
+.app-section {
+  border-top: 1px solid rgba(214, 168, 63, 0.14);
+  border-bottom: 1px solid rgba(214, 168, 63, 0.14);
+}
+
+.section-buttons {
+  margin-top: 28px;
 }
 
 .donation-card {
@@ -338,6 +468,14 @@ main {
   margin: 0;
   color: var(--blue);
   font-size: 13px;
+}
+
+.copy-status[data-type="success"] {
+  color: #8ff0b2;
+}
+
+.copy-status[data-type="warning"] {
+  color: #f1dca4;
 }
 
 .official-links {
@@ -375,6 +513,23 @@ footer p {
   margin: 6px 0;
 }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: var(--gold-bright);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 920px) {
   .hero-inner,
   .mascot-section,
@@ -384,6 +539,7 @@ footer p {
 
   .grid,
   .progress-grid,
+  .market-grid,
   .official-links {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -421,6 +577,8 @@ footer p {
 
   .grid,
   .progress-grid,
+  .feature-cards,
+  .market-grid,
   .official-links {
     grid-template-columns: 1fr;
   }
