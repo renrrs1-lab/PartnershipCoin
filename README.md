@@ -42,6 +42,38 @@ PartnershipCoin (PARC) is a BEP-20 token on BNB Smart Chain focused on building 
 - PancakeSwap: https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0x4A7CB744EE8f1B656A20940B80b368d5d8172875&chain=bsc
 - GitHub: https://github.com/renrrs1-lab/PartnershipCoin
 
+## Community Fund
+
+Voluntary community support addresses:
+
+EVM / MetaMask / BNB Chain:
+
+```text
+0xfDcAbb9647602cdd50dFAF458c9cB91114fff358
+```
+
+Bitcoin:
+
+```text
+bc1qyek8xmtrv7jwp5thduzunlr4vpgy83yqare3st
+```
+
+Solana:
+
+```text
+FRAM2dbqEejfWFQMT7khxadHMqtDdjfmXnkQpJGxdu2v
+```
+
+Tron:
+
+```text
+TFmCvobxxZkBrRAuHJq85aNYjNp3qqXpb6
+```
+
+Warning:
+
+Always verify the network before sending. Contributions are voluntary and do not represent token purchases, ownership, financial returns or financial guarantees.
+
 ## Live Market Data
 
 PARC market information can be viewed through public market platforms:

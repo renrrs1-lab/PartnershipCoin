@@ -18,7 +18,6 @@ const BSC_CHAIN = {
 };
 
 const PAIR_ADDRESS = "0xf517f5c05b1214bd35e30bc03b2921e5230c93b5";
-const DONATION_WALLET = "0xfDcAbb9647602cdd50dFAF458c9cB91114fff358";
 const METAMASK_MOBILE_DAPP = "https://metamask.app.link/dapp/renrrs1-lab.github.io/PartnershipCoin/";
 let lastProviderDetection = {
   braveWalletDetected: false,
@@ -49,14 +48,26 @@ function selectText(element) {
   selection.addRange(range);
 }
 
-async function copyText(value, statusElement, successMessage, fallbackElement) {
+async function copyText(
+  value,
+  statusElement,
+  successMessage,
+  fallbackElement,
+  fallbackMessage = "Text selected. Press Ctrl+C to copy."
+) {
   try {
     await navigator.clipboard.writeText(value);
-    if (statusElement) statusElement.innerText = successMessage;
+    if (statusElement) {
+      statusElement.innerText = successMessage;
+      statusElement.dataset.type = "success";
+    }
     return true;
   } catch (error) {
     selectText(fallbackElement);
-    if (statusElement) statusElement.innerText = "Text selected. Press Ctrl+C to copy.";
+    if (statusElement) {
+      statusElement.innerText = fallbackMessage;
+      statusElement.dataset.type = "warning";
+    }
     return false;
   }
 }
@@ -281,19 +292,34 @@ async function loadDexData() {
   }
 }
 
-async function copyDonationWallet() {
+async function copyDonationAddress(event) {
+  const button = event.currentTarget;
+  const addressElement = document.getElementById(button.dataset.addressId);
+  const statusElement = document.getElementById(button.dataset.statusId);
+
+  if (!addressElement) {
+    if (statusElement) {
+      statusElement.innerText = "Please copy the address manually.";
+      statusElement.dataset.type = "warning";
+    }
+    return;
+  }
+
   await copyText(
-    DONATION_WALLET,
-    document.getElementById("copyStatus"),
-    "Donation wallet copied.",
-    document.getElementById("donationWallet")
+    addressElement.innerText.trim(),
+    statusElement,
+    "Address copied.",
+    addressElement,
+    "Please copy the address manually."
   );
 }
 
 document.getElementById("addParcButton")?.addEventListener("click", addParcToMetaMask);
 document.getElementById("appAddParcButton")?.addEventListener("click", addParcToMetaMask);
 document.getElementById("copyContractButton")?.addEventListener("click", copyContract);
-document.getElementById("copyDonationWallet")?.addEventListener("click", copyDonationWallet);
+document.querySelectorAll(".copy-address-button").forEach((button) => {
+  button.addEventListener("click", copyDonationAddress);
+});
 
 loadDexData();
 setInterval(loadDexData, 60000);

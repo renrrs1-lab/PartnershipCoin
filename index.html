@@ -19,7 +19,7 @@
       <div class="nav-links">
         <a href="#official-project-info">Info</a>
         <a href="#app">App</a>
-        <a href="#support">Support</a>
+        <a href="#community-fund">Community Fund</a>
         <a href="#official-links">Links</a>
       </div>
     </nav>
@@ -326,24 +326,97 @@
       </div>
     </section>
 
-    <section class="section donation-section" id="support" aria-labelledby="support-title">
+    <section class="section donation-section community-fund-section" id="community-fund" aria-labelledby="community-fund-title">
       <div class="section-copy">
-        <p class="eyebrow">Support / Donation</p>
-        <h2 id="support-title">Support PARC Ecosystem Growth</h2>
+        <p class="eyebrow">Community Fund</p>
+        <h2 id="community-fund-title">Community Fund</h2>
+        <p class="section-subtitle">Support the PARC ecosystem voluntarily.</p>
         <p>
-          PARC is being built step by step with focus on transparency, real utility and long-term ecosystem growth.
-          Community donations are optional and may be used to support liquidity, app development, infrastructure and project expansion.
-          All support helps strengthen the PARC ecosystem.
-        </p>
-        <p class="security-note">
-          Never share your seed phrase or private key. Donations are optional and do not represent investment promises or assured outcomes.
+          Community support helps with ecosystem growth, app development, liquidity support and public infrastructure.
+          Contributions are optional and do not represent token purchases, ownership, financial returns or any financial guarantee.
         </p>
       </div>
-      <div class="donation-card">
-        <img src="./PARC_Community_Fund_QR.png" alt="QR code for PARC donation wallet">
-        <p class="mono" id="donationWallet">0xfDcAbb9647602cdd50dFAF458c9cB91114fff358</p>
-        <button class="btn primary" id="copyDonationWallet" type="button">Copy Donation Wallet</button>
-        <p class="copy-status" id="copyStatus" aria-live="polite"></p>
+
+      <div class="community-fund-panel">
+        <div class="security-note community-warning">
+          <h3>Important</h3>
+          <p>
+            Always verify the network before sending. Sending assets to the wrong network or unsupported address may result in permanent loss.
+            Contributions are voluntary and do not provide ownership, returns, rewards or financial guarantees.
+          </p>
+        </div>
+
+        <div class="evm-note">
+          <h3>MetaMask / EVM Notice</h3>
+          <p>
+            For MetaMask, use the EVM address only after selecting the correct EVM network, such as BNB Chain.
+            Do not send Bitcoin, Solana or Tron assets to the EVM address.
+          </p>
+        </div>
+
+        <h3 class="network-title">Supported Donation Networks</h3>
+
+        <div class="donation-network-grid">
+          <article class="donation-network-card">
+            <div class="network-card-header">
+              <span class="network-badge">EVM</span>
+              <div>
+                <h4>EVM / MetaMask</h4>
+                <p>BNB Chain and EVM-compatible networks</p>
+              </div>
+            </div>
+            <p class="mono donation-address" id="evmDonationAddress">0xfDcAbb9647602cdd50dFAF458c9cB91114fff358</p>
+            <p>Use this address only for supported EVM-compatible networks. Always select the correct network in your wallet before sending.</p>
+            <figure class="evm-qr">
+              <img src="./PARC_Community_Fund_QR.png" alt="QR code for EVM donation address only">
+              <figcaption>EVM address QR Code only</figcaption>
+            </figure>
+            <button class="btn primary copy-address-button" type="button" data-address-id="evmDonationAddress" data-status-id="evmCopyStatus">Copy EVM Address</button>
+            <p class="copy-status" id="evmCopyStatus" aria-live="polite"></p>
+          </article>
+
+          <article class="donation-network-card">
+            <div class="network-card-header">
+              <span class="network-badge">BTC</span>
+              <div>
+                <h4>Bitcoin</h4>
+                <p>BTC Network</p>
+              </div>
+            </div>
+            <p class="mono donation-address" id="btcDonationAddress">bc1qyek8xmtrv7jwp5thduzunlr4vpgy83yqare3st</p>
+            <p>Use this address only for Bitcoin network transfers.</p>
+            <button class="btn copy-address-button" type="button" data-address-id="btcDonationAddress" data-status-id="btcCopyStatus">Copy BTC Address</button>
+            <p class="copy-status" id="btcCopyStatus" aria-live="polite"></p>
+          </article>
+
+          <article class="donation-network-card">
+            <div class="network-card-header">
+              <span class="network-badge">SOL</span>
+              <div>
+                <h4>Solana</h4>
+                <p>Solana Network</p>
+              </div>
+            </div>
+            <p class="mono donation-address" id="solDonationAddress">FRAM2dbqEejfWFQMT7khxadHMqtDdjfmXnkQpJGxdu2v</p>
+            <p>Use this address only for Solana network transfers.</p>
+            <button class="btn copy-address-button" type="button" data-address-id="solDonationAddress" data-status-id="solCopyStatus">Copy SOL Address</button>
+            <p class="copy-status" id="solCopyStatus" aria-live="polite"></p>
+          </article>
+
+          <article class="donation-network-card">
+            <div class="network-card-header">
+              <span class="network-badge">TRON</span>
+              <div>
+                <h4>Tron</h4>
+                <p>Tron Network</p>
+              </div>
+            </div>
+            <p class="mono donation-address" id="tronDonationAddress">TFmCvobxxZkBrRAuHJq85aNYjNp3qqXpb6</p>
+            <p>Use this address only for Tron network transfers.</p>
+            <button class="btn copy-address-button" type="button" data-address-id="tronDonationAddress" data-status-id="tronCopyStatus">Copy TRON Address</button>
+            <p class="copy-status" id="tronCopyStatus" aria-live="polite"></p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -441,6 +514,7 @@
 
   <footer>
     <div class="footer-links" aria-label="Footer official links">
+      <a href="#community-fund">Community Fund</a>
       <a target="_blank" rel="noopener noreferrer" href="https://renrrs1-lab.github.io/PartnershipCoin/">Website</a>
       <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.partnershipcoin.app">Google Play</a>
       <a target="_blank" rel="noopener noreferrer" href="https://bscscan.com/token/0x4A7CB744EE8f1B656A20940B80b368d5d8172875">BscScan</a>

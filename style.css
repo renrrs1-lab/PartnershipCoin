@@ -172,6 +172,8 @@ footer {
 .info-card,
 .security-panel,
 .card,
+.community-fund-panel,
+.donation-network-card,
 .donation-card {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -532,6 +534,145 @@ footer a:hover {
   margin-top: 28px;
 }
 
+.community-fund-section {
+  display: block;
+  border-top: 1px solid rgba(214, 168, 63, 0.14);
+}
+
+.community-fund-section .section-copy {
+  max-width: 860px;
+}
+
+.community-fund-panel {
+  display: grid;
+  gap: 18px;
+  margin-top: 30px;
+  padding: 24px;
+}
+
+.community-fund-panel h3,
+.donation-network-card h4 {
+  margin: 0;
+  color: var(--gold-bright);
+}
+
+.community-fund-panel p,
+.donation-network-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.community-warning,
+.evm-note {
+  padding: 18px;
+  border-radius: 8px;
+}
+
+.community-warning {
+  padding-left: 18px;
+}
+
+.community-warning h3,
+.evm-note h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.evm-note {
+  border: 1px solid rgba(91, 199, 255, 0.26);
+  border-left: 3px solid var(--blue);
+  background: rgba(91, 199, 255, 0.06);
+}
+
+.evm-note p {
+  color: #d8eefe;
+}
+
+.network-title {
+  margin-top: 8px !important;
+  font-size: clamp(22px, 3vw, 30px);
+}
+
+.donation-network-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.donation-network-card {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  padding: 22px;
+}
+
+.network-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.network-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 54px;
+  min-height: 38px;
+  padding: 8px 10px;
+  border: 1px solid rgba(91, 199, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(91, 199, 255, 0.08);
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.network-card-header h4 {
+  font-size: 20px;
+}
+
+.network-card-header p {
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+.donation-address {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid rgba(214, 168, 63, 0.18);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.24);
+  font-size: 14px;
+}
+
+.evm-qr {
+  width: min(220px, 100%);
+  margin: 0;
+  text-align: center;
+}
+
+.evm-qr img {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.evm-qr figcaption {
+  margin-top: 8px;
+  color: #d8eefe;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.donation-network-card .btn {
+  width: fit-content;
+}
+
 .donation-card {
   display: grid;
   justify-items: center;
@@ -622,8 +763,7 @@ footer p {
 
 @media (max-width: 920px) {
   .hero-inner,
-  .mascot-section,
-  .donation-section {
+  .mascot-section {
     grid-template-columns: 1fr;
   }
 
@@ -631,6 +771,7 @@ footer p {
   .grid,
   .progress-grid,
   .market-grid,
+  .donation-network-grid,
   .official-links {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -659,6 +800,7 @@ footer p {
 
   .buttons,
   .buttons .btn,
+  .donation-network-card .btn,
   .donation-card .btn {
     width: 100%;
   }
@@ -672,8 +814,18 @@ footer p {
   .progress-grid,
   .feature-cards,
   .market-grid,
+  .donation-network-grid,
   .official-links {
     grid-template-columns: 1fr;
+  }
+
+  .network-card-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .network-badge {
+    width: fit-content;
   }
 
   .mascot-frame img {
