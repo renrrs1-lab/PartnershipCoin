@@ -20,7 +20,8 @@ PartnershipCoin (PARC) is a community-driven Web3 ecosystem built on BNB Smart C
 - Founder / Project Lead: Renan Rodrigues Silverio
 - Role: PartnershipCoin creator and PARC Wallet app developer
 - Focus: Web3 wallet app, BNB Smart Chain integration, token utility, transparency and community growth.
-- LinkedIn: Professional profile link will be added soon.
+- Professional Profile:
+  - LinkedIn: https://www.linkedin.com/in/renan-rodrigues-silverio-31096b4b/
 
 ## About PartnershipCoin
 
@@ -34,6 +35,7 @@ PartnershipCoin (PARC) is a BEP-20 token on BNB Smart Chain focused on building 
 - X / Twitter: https://x.com/PARCCoin
 - Telegram: https://t.me/+sN0SkOwkpkdmODZh
 - Discord: https://discord.gg/bv75R8Gwk9
+- LinkedIn: https://www.linkedin.com/in/renan-rodrigues-silverio-31096b4b/
 - GeckoTerminal: https://www.geckoterminal.com/bsc/pools/0xf517f5c05b1214bd35e30bc03b2921e5230c93b5
 - CoinMarketCap DEX: https://dex.coinmarketcap.com/token/bsc/0x4a7cb744ee8f1b656a20940b80b368d5d8172875/
 - DexScreener: https://dexscreener.com/bsc/0x4A7CB744EE8f1B656A20940B80b368d5d8172875
